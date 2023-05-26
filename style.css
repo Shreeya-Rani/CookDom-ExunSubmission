@@ -46,6 +46,7 @@ input{
     color: var(--clr-primary);
     width: 30vw;
     height: 10px;
+    border: none;
 
 }
 
@@ -167,4 +168,66 @@ footer p{
     margin: 0;
     text-align: center;
     padding: 10px
+}
+
+
+/* ------------------Responsiveness for Mobile Phones----------------------  */
+
+@media only screen and (max-width: 600px) {
+    .hero-txt {
+        width: 90vw;
+        margin: 20px;
+      }
+
+    .hero-img {
+        width: 90vw;
+    }
+    .hero-img img {
+        width: 100%;
+    }
+    .hero{
+        flex-direction: column;
+        height: auto;
+        margin: 0;
+    }
+    .cuisine-box{
+        width: 100%;
+        margin: 10px;
+    }
+    .navigation .logo{
+        font-size: 25px;
+    }
+    .links {
+        position: fixed;
+        background-color: var(--clr-secondary);
+        top: 0;
+        right: -300px;
+        width: 40vw;
+        height: 100vh;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        transition: 0.3s right;
+    }
+    .navigation .links i{
+        font-size: 25px;
+        top: 25px;
+        left: 25px;
+        position: absolute;
+    }
+    .navigation a{
+        color: #465C46;
+        border: none;
+        font-size: 20px;
+        padding: 2px;
+        margin: 5px;
+    }
+    .navigation .fill{
+        background-color: #fff0;
+    }
+
+    .navigation i{
+        color: #fff;
+        font-size: 20px;
+    }
 }

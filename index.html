@@ -6,16 +6,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <title>CookDom</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/brands.min.css" integrity="sha512-9YHSK59/rjvhtDcY/b+4rdnl0V4LPDWdkKceBl8ZLF5TB6745ml1AfluEU6dFWqwDw9lPvnauxFgpKvJqp7jiQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
 </head>
 <body>
 <!-- -------------------Navigation Bar------------------- -->
     <div class="navigation">
-            <a href="#" class="logo">Cook<span>Dom</span></a>
-            <input type="text" placeholder="Search Recipes">
-            <div class="links">
+        <a href="#" class="logo">Cook<span>Dom</span></a>
+        <input type="text" placeholder="Search Recipes">
+        <div class="links" id="sidemenu">
             <a href="#">Sign Up</a>
             <a href="#" class="fill">Login</a>
+            <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
         </div>
+        <i class="fa-solid fa-bars" onclick="openmenu()"></i>
     </div>
 
     <!-- --------------------Hero Section------------------------ -->
@@ -122,4 +127,15 @@
     </footer>
     
 </body>
+<script>
+    var sidemenu = document.getElementById("sidemenu");
+
+    function openmenu(){
+        sidemenu.style.right= "0";
+
+    }
+    function closemenu(){
+        sidemenu.style.right= "-300px";
+    }
+</script>
 </html>
